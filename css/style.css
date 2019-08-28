@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap&subset=cyrillic-ext");
+body {
+  font-family: 'Roboto', sans-serif; }
+
+/* Projects
+-----------------------------*/
+.projects {
+  padding: 80px; }
+  @media (max-width: 768px) {
+    .projects {
+      padding: 40px; } }
+  @media (max-width: 480px) {
+    .projects {
+      padding: 20px; } }
+  .projects h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 100;
+    color: #344258;
+    padding-bottom: 70px; }
+    @media (max-width: 480px) {
+      .projects h1 {
+        font-size: 2rem; } }
+  .projects .page-description {
+    padding-bottom: 70px; }
+  .projects-item {
+    position: relative;
+    height: 560px;
+    transform: scale(1);
+    transition: all .3s linear;
+    display: flex;
+    align-items: center; }
+    .projects-item__info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 500;
+      font-size: 22px;
+      z-index: 2;
+      padding: 20px; }
+    .projects-item:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      transition: all .3s linear; }
+    .projects-item--hover {
+      position: relative;
+      opacity: 0;
+      padding: 0 20px 60px 20px;
+      margin: 0 auto;
+      z-index: 3;
+      color: #fff;
+      text-align: center;
+      transition: all .2s linear; }
+      .projects-item--hover p {
+        font-size: 18px;
+        letter-spacing: -1px; }
+        .projects-item--hover p:after {
+          content: '';
+          width: 60px;
+          height: 3px;
+          background: #fff;
+          display: block;
+          margin: 20px auto 0; }
+      .projects-item--hover .btn {
+        background: transparent;
+        border: 2px solid #fff;
+        border-radius: 0;
+        padding: 5px 20px;
+        margin-top: 10px;
+        text-transform: uppercase; }
+        .projects-item--hover .btn:hover {
+          background: #fff;
+          color: #000; }
+    @media (min-width: 769px) {
+      .projects-item:hover {
+        transition: all .1s linear;
+        transform: scale(1.05);
+        z-index: 2; }
+        .projects-item:hover .projects-item--hover {
+          opacity: 1;
+          transition: all .2s linear; }
+        .projects-item:hover:after {
+          transition: all .3s linear;
+          background: rgba(0, 0, 0, 0.7); } }
+    @media (max-width: 768px) {
+      .projects-item {
+        transition: all .1s linear;
+        z-index: 2; }
+        .projects-item .projects-item--hover {
+          opacity: 1;
+          transition: all .2s linear; }
+        .projects-item:after {
+          transition: all .3s linear;
+          background: rgba(0, 0, 0, 0.7); } }
+  .projects__com {
+    background: url("../images/pic-1.jpg") no-repeat center;
+    background-size: cover; }
+  .projects__road {
+    background: url("../images/pic-2.jpg") no-repeat center;
+    background-size: cover; }
+  .projects__ege {
+    background: url("../images/pic-3.jpg") no-repeat center;
+    background-size: cover; }
+  .projects .buttons {
+    margin: 70px 0 0; }
+    .projects .buttons a {
+      margin: 0 auto;
+      background: transparent;
+      text-transform: uppercase;
+      font-size: 16px;
+      border-radius: 0;
+      border: 3px solid;
+      color: #0c274c; }
+
+/* Modal
+-----------------------------*/
+.modal p {
+  margin: 20px 0 0; }
+.modal img {
+  max-width: 100%; }
+
+/* Footer
+-----------------------------*/
+footer {
+  background: #051d2c;
+  padding: 26px;
+  color: #fff; }
+  @media (max-width: 480px) {
+    footer {
+      padding: 20px; } }
+  footer h2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 60px; }
+  footer p {
+    font-weight: 100; }
+  footer .contact-info {
+    display: flex; }
+    @media (min-width: 993px) {
+      footer .contact-info {
+        align-items: center; } }
+    @media (max-width: 992px) {
+      footer .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 40px; } }
+    footer .contact-info__phone {
+      font-size: 24px;
+      font-weight: 100;
+      padding-right: 20px; }
+      footer .contact-info__phone p {
+        margin: 20px 0; }
+    footer .contact-info__www {
+      border-left: 3px solid #2758a7;
+      padding-left: 20px;
+      color: #3d95e3; }
+      footer .contact-info__www p {
+        margin: 10px 0;
+        font-weight: 300; }
+        footer .contact-info__www p strong {
+          font-weight: 400; }
+  footer form {
+    border: 2px solid #253448;
+    padding: 40px; }
+    @media (max-width: 480px) {
+      footer form {
+        padding: 20px; } }
+    footer form .form-control {
+      background: #253448;
+      border-color: #253448;
+      color: #fff;
+      padding: 26px 35px;
+      margin-bottom: 2px;
+      font-weight: 100;
+      font-size: 14px; }
+      footer form .form-control::-webkit-input-placeholder {
+        color: #fff; }
+      footer form .form-control::-moz-placeholder {
+        color: #fff; }
+      footer form .form-control:-ms-input-placeholder {
+        color: #fff; }
+      footer form .form-control:-moz-placeholder {
+        color: #fff; }
+      footer form .form-control:focus {
+        background: #32435a;
+        outline: none;
+        border-color: #253448;
+        box-shadow: none;
+        color: #fff;
+        font-weight: 100; }
+    footer form a {
+      text-decoration: underline;
+      font-weight: 300; }
+    footer form .buttons {
+      margin-bottom: 0; }
+      footer form .buttons .btn {
+        background: transparent;
+        border: 3px solid #fff;
+        border-radius: 0;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 10px 30px; }
+        footer form .buttons .btn:hover {
+          background: #fff;
+          color: #051d2c; }
+
+/*# sourceMappingURL=style.css.map */
