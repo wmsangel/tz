@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap&subset=cyrillic-ext');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Projects
+-----------------------------*/
+.projects {
+    padding: 80px;
+
+    @media (max-width: 768px) {
+        padding: 40px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 100;
+        color: #344258;
+        padding-bottom: 70px;
+
+        @media (max-width: 480px) {
+            font-size: 2rem;
+        }
+    }
+
+    .page-description {
+        padding-bottom: 70px;
+    }
+
+    &-item {
+        position: relative;
+        height: 560px;
+        transform: scale(1);
+        transition: all .3s linear;
+        display: flex;
+        align-items: center;
+
+        &__info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 500;
+            font-size: 22px;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            transition: all .3s linear;
+        }
+
+        &--hover {
+            position: relative;
+            opacity: 0;
+            padding: 0 20px 60px 20px;
+            margin: 0 auto;
+            z-index: 3;
+            color: #fff;
+            text-align: center;
+            transition: all .2s linear;
+
+            p {
+                font-size: 18px;
+                letter-spacing: -1px;
+
+                &:after {
+                    content: '';
+                    width: 60px;
+                    height: 3px;
+                    background: #fff;
+                    display: block;
+                    margin: 20px auto 0;
+                }
+            }
+
+            .btn {
+                background: transparent;
+                border: 2px solid #fff;
+                border-radius: 0;
+                padding: 5px 20px;
+                margin-top: 10px;
+                text-transform: uppercase;
+
+                &:hover {
+                    background: #fff;
+                    color: #000;
+                }
+            }
+        }
+
+        @media (min-width: 769px) {
+            &:hover {
+                transition: all .1s linear;
+                transform: scale(1.05);
+                z-index: 2;
+
+                .projects-item--hover {
+                    opacity: 1;
+                    transition: all .2s linear;
+                }
+
+                &:after {
+                    transition: all .3s linear;
+                    background: rgba(0,0,0,.7);
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            transition: all .1s linear;
+            z-index: 2;
+
+            .projects-item--hover {
+                opacity: 1;
+                transition: all .2s linear;
+            }
+
+            &:after {
+                transition: all .3s linear;
+                background: rgba(0,0,0,.7);
+            }
+        }
+    }
+
+    &__com {
+        background: url('../images/pic-1.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    &__road {
+        background: url('../images/pic-2.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    &__ege {
+        background: url('../images/pic-3.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    .buttons {
+        margin: 70px 0 0;
+
+        a {
+            margin: 0 auto;
+            background: transparent;
+            text-transform: uppercase;
+            font-size: 16px;
+            border-radius: 0;
+            border: 3px solid;
+            color: #0c274c;
+        }
+    }
+}
+
+
+
+/* Modal
+-----------------------------*/
+.modal {
+    p {
+        margin: 20px 0 0;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+
+
+/* Footer
+-----------------------------*/
+footer {
+    background: #051d2c;
+    padding: 26px;
+    color: #fff;
+
+    @media (max-width: 480px) {
+        padding: 20px;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 48px;
+        font-weight: 400;
+        margin-bottom: 60px;
+    }
+
+    p {
+        font-weight: 100;
+    }
+
+    .contact-info {
+        display: flex;
+        @media (min-width: 993px) {
+            align-items: center;
+        }
+        @media (max-width: 992px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 40px;
+        }
+
+        &__phone {
+            font-size: 24px;
+            font-weight: 100;
+            padding-right: 20px;
+
+            p {
+                margin: 20px 0;
+            }
+        }
+
+        &__www {
+            border-left: 3px solid #2758a7;
+            padding-left: 20px;
+            color: #3d95e3;
+
+            p {
+                margin: 10px 0;
+                font-weight: 300;
+
+                strong {
+                    font-weight: 400;
+                }
+            }
+        }
+
+    }
+
+    form {
+        border: 2px solid #253448;
+        padding: 40px;
+
+        @media (max-width: 480px) {
+            padding: 20px;
+        }
+
+        .form-control {
+            background: #253448;
+            border-color: #253448;
+            color: #fff;
+            padding: 26px 35px;
+            margin-bottom: 2px;
+            font-weight: 100;
+            font-size: 14px;
+
+            &::-webkit-input-placeholder {
+                color: #fff;
+            }
+            &::-moz-placeholder {
+                color: #fff;
+            }
+            &:-ms-input-placeholder {
+                color: #fff;
+            }
+            &:-moz-placeholder {
+                color: #fff;
+            }
+
+            &:focus {
+                background: rgb(50, 67, 90);
+                outline: none;
+                border-color: #253448;
+                box-shadow: none;
+                color: #fff;
+                font-weight: 100;
+            }
+        }
+
+        a {
+            text-decoration: underline;
+            font-weight: 300;
+        }
+
+        .buttons {
+            margin-bottom: 0;
+
+            .btn {
+                background: transparent;
+                border: 3px solid #fff;
+                border-radius: 0;
+                font-size: 18px;
+                text-transform: uppercase;
+                padding: 10px 30px;
+
+                &:hover {
+                    background: #fff;
+                    color: #051d2c;
+                }
+            }
+        }
+    }
+}
